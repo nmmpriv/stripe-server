@@ -1,0 +1,8 @@
+{
+  "name": "stripe-server",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "stripe": "^14.0.0"
+  }
+}
