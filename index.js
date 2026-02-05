@@ -5,7 +5,9 @@ const app = express();
 app.use(express.json());
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
+app.get('/', (req, res) => {
+  res.send('Stripe server running');
+});
 app.post("/create-checkout-session", async (req, res) => {
   try {
     const session = await stripe.checkout.sessions.create({
